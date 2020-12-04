@@ -1,1 +1,1 @@
-Cobra
+Cobra is a Go package
