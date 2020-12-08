@@ -33,14 +33,14 @@ func init() {
 	rootCmd.AddCommand(numbersCmd)
 
 	numbersCmd.Flags().IntVarP(
-		&countFlag, "count", "c", 0,
+		&countFlagNumbers, "count", "c", 0,
 		"A count of random numbers",
 	)
 
 	numbersCmd.MarkFlagRequired("count")
 
 	numbersCmd.Flags().StringSliceVarP(
-		&rangeFlag, "range", "r", []string{"1:100"},
+		&rangeFlagNumbers, "range", "r", []string{"1:100"},
 		"Range of numbers. Optional",
 	)
 }
