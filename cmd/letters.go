@@ -1,4 +1,3 @@
-
 package cmd
 
 import (
@@ -9,7 +8,7 @@ import (
 
 var (
 	countFlagLetters int
-	langFlagLetters string
+	langFlagLetters  string
 )
 
 // lettersCmd represents the letters command
@@ -31,14 +30,14 @@ func init() {
 	rootCmd.AddCommand(lettersCmd)
 
 	lettersCmd.Flags().IntVarP(
-		&Count, "count", "c", "0",
+		&countFlagLetters, "count", "c", 0,
 		"A count of random letters",
 	)
 
 	lettersCmd.MarkFlagRequired("count")
 
 	lettersCmd.Flags().StringVarP(
-		&Lang, "lang", "l", "en",
+		&langFlagLetters, "lang", "l", "en",
 		"A language. Optional",
 	)
 }
